@@ -188,7 +188,7 @@ st.divider()
 st.subheader("🕰️ Stale Order Books (wide spread at high prob)")
 st.caption("These show high probability but the spread suggests the book hasn’t been updated.")
 st.dataframe(
-pd.DataFrame(stale)[[“Question”, “Side”, “Spread”, “Volume ($M)”, “Days Left”, “Action”]],
+pd.DataFrame(stale)[["Question", "Side", "Spread", "Volume ($M)", "Days Left", "Action"]],
 use_container_width=True, hide_index=True,
 )
 
