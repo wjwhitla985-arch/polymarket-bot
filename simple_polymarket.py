@@ -28,7 +28,7 @@ help="Combines spread tightness, liquidity, time horizon")
 show_rejected = st.checkbox("Show rejected markets", False)
 show_stale    = st.checkbox("Show stale markets", False)
 st.divider()
-st.caption(“Confidence = spread tightness + liquidity depth + time horizon + volume”)
+st.caption("Confidence = spread tightness + liquidity depth + time horizon + volume")
 
 # —————————————————————————
 
