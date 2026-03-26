@@ -10,7 +10,7 @@ GAMMA_URL = "https://gamma-api.polymarket.com/markets"
 
 st.set_page_config(page_title="Harvest Scanner", layout="wide")
 st.title("🌾 Short-Term Harvest Scanner")
-st.markdown(”**Near-certainty markets (96%+) — category-filtered, confidence-scored**”)
+st.markdown("**Near-certainty markets (96%+) — category-filtered, confidence-scored**")
 
 # —————————————————————————
 
