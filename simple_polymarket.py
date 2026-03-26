@@ -51,7 +51,7 @@ params={
 timeout=20,
 )
   r.raise_for_status()
-return r.json()
+ return r.json()
 except Exception as e:
 st.error(f"API Error: {e}")
 return []
