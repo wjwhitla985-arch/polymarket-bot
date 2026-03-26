@@ -57,7 +57,7 @@ st.error(f"API Error: {e}")
 return []
 
 def parse_probability(m: dict):
-"""Return (yes_price, no_price, best_prob, best_side) or all-None.”””
+"""Return (yes_price, no_price, best_prob, best_side) or all-None."""
 prices_raw = m.get("outcomePrices", [])
 if isinstance(prices_raw, str):
 try:
