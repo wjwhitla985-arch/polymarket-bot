@@ -19,7 +19,7 @@ st.markdown("**Near-certainty markets (96%+) — category-filtered, confidence-s
 # —————————————————————————
 
 with st.sidebar:
-st.header(“⚙️ Settings”)
+st.header("⚙️ Settings")
 min_prob      = st.slider(“Min probability”,  0.90, 0.99, 0.96, 0.01)
 max_days      = st.slider(“Max days left”,    1, 14, 7)
 min_vol_m     = st.slider(“Min volume ($M)”,  0.01, 2.0, 0.05, 0.01)
