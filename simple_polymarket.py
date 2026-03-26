@@ -202,5 +202,4 @@ use_container_width=True, hide_index=True,
 
 st.caption(
 f”Last refreshed: {datetime.now().strftime(’%H:%M:%S’)} · “
-“⚠️ Informational only. Not financial advice.”
-)
+“⚠️ Informational only. Not financial advice.")
