@@ -1,11 +1,3 @@
-“””
-simple_polymarket.py — Basic Harvest Scanner (Streamlit)
-Run: streamlit run simple_polymarket.py
-
-This is the lightweight version — no XGBoost model required.
-For full AI predictions use: streamlit run polymarket_dashboard.py
-“””
-
 import json
 import math
 import requests
