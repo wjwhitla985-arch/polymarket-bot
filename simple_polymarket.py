@@ -97,7 +97,7 @@ harvest, rejected, stale = [], [], []
 
 for m in raw:
 try:
-question = str(m.get("question") or “Unknown”)[:140]
+question = str(m.get("question") or "Unknown")[:140]
 volume   = float(m.get("volume",    0) or 0) / 1_000_000
 liquidity = float(m.get("liquidity", 0) or 0)
 
