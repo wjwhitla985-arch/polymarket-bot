@@ -25,8 +25,8 @@ max_days      = st.slider("Max days left",    1, 14, 7)
 min_vol_m     = st.slider("Min volume ($M)",  0.01, 2.0, 0.05, 0.01)
 min_conf      = st.slider("Min confidence",   0.0, 1.0, 0.40, 0.05,
 help="Combines spread tightness, liquidity, time horizon")
-show_rejected = st.checkbox(“Show rejected markets”, False)
-show_stale    = st.checkbox(“Show stale markets”, False)
+show_rejected = st.checkbox("Show rejected markets", False)
+show_stale    = st.checkbox("Show stale markets", False)
 st.divider()
 st.caption(“Confidence = spread tightness + liquidity depth + time horizon + volume”)
 
