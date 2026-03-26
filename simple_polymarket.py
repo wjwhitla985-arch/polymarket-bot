@@ -8,7 +8,7 @@ from engine import is_safe_category, confidence_score
 
 GAMMA_URL = "https://gamma-api.polymarket.com/markets"
 
-st.set_page_config(page_title="Harvest Scanner", layout=“wide”)
+st.set_page_config(page_title="Harvest Scanner", layout="wide")
 st.title(“🌾 Short-Term Harvest Scanner”)
 st.markdown(”**Near-certainty markets (96%+) — category-filtered, confidence-scored**”)
 
