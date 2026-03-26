@@ -57,7 +57,7 @@ st.error(f"API Error: {e}")
 return []
 
 def parse_probability(m: dict):
-“”“Return (yes_price, no_price, best_prob, best_side) or all-None.”””
+"""Return (yes_price, no_price, best_prob, best_side) or all-None.”””
 prices_raw = m.get("outcomePrices", [])
 if isinstance(prices_raw, str):
 try:
@@ -166,27 +166,27 @@ except Exception:
 # —————————————————————————
 
 c1, c2, c3, c4 = st.columns(4)
-c1.metric(“✅ Harvest Ready”, len(harvest))
-c2.metric(“🚩 Filtered Out”,  len(rejected))
-c3.metric(“🕰️ Stale Books”,   len(stale))
-c4.metric(“📊 Total Scanned”, len(raw))
+c1.metric("✅ Harvest Ready", len(harvest))
+c2.metric("🚩 Filtered Out",  len(rejected))
+c3.metric("🕰️ Stale Books",   len(stale))
+c4.metric("📊 Total Scanned", len(raw))
 st.divider()
 
 if harvest:
-st.subheader(“🟢 Harvest Opportunities”)
-df = pd.DataFrame(harvest).sort_values(“Volume ($M)”, ascending=False)
+st.subheader("🟢 Harvest Opportunities")
+df = pd.DataFrame(harvest).sort_values("Volume ($M)", ascending=False)
 st.dataframe(
-df[[“Question”, “Side”, “YES price”, “NO price”, “Spread”,
-“Volume ($M)”, “Days Left”, “Implied Return”, “Confidence”, “Action”]],
+df[["Question", "Side", "YES price", "NO price", "Spread",
+"Volume ($M)", "Days Left", "Implied Return", "Confidence", "Action"]],
 use_container_width=True, hide_index=True,
 )
 else:
-st.info(“No harvest opportunities right now — try adjusting the sidebar filters.”)
+st.info("No harvest opportunities right now — try adjusting the sidebar filters.")
 
 if show_stale and stale:
 st.divider()
-st.subheader(“🕰️ Stale Order Books (wide spread at high prob)”)
-st.caption(“These show high probability but the spread suggests the book hasn’t been updated.”)
+st.subheader("🕰️ Stale Order Books (wide spread at high prob)")
+st.caption("These show high probability but the spread suggests the book hasn’t been updated.")
 st.dataframe(
 pd.DataFrame(stale)[[“Question”, “Side”, “Spread”, “Volume ($M)”, “Days Left”, “Action”]],
 use_container_width=True, hide_index=True,
