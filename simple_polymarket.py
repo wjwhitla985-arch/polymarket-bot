@@ -42,23 +42,23 @@ try:
 r = requests.get(
 GAMMA_URL,
 params={
-“active”:    “true”,
-“closed”:    “false”,
-“limit”:     200,
-“order”:     “volume”,
-“ascending”: “false”,
+"active":    "true",
+"closed":    "false",
+"limit":     200,
+"order":     "volume",
+"ascending": "false",
 },
 timeout=20,
 )
 r.raise_for_status()
 return r.json()
 except Exception as e:
-st.error(f”API Error: {e}”)
+st.error(f"API Error: {e}")
 return []
 
 def parse_probability(m: dict):
 “”“Return (yes_price, no_price, best_prob, best_side) or all-None.”””
-prices_raw = m.get(“outcomePrices”, [])
+prices_raw = m.get("outcomePrices", [])
 if isinstance(prices_raw, str):
 try:
 prices_raw = json.loads(prices_raw)
@@ -97,9 +97,9 @@ harvest, rejected, stale = [], [], []
 
 for m in raw:
 try:
-question = str(m.get(“question”) or “Unknown”)[:140]
-volume   = float(m.get(“volume”,    0) or 0) / 1_000_000
-liquidity = float(m.get(“liquidity”, 0) or 0)
+question = str(m.get("question") or “Unknown”)[:140]
+volume   = float(m.get("volume",    0) or 0) / 1_000_000
+liquidity = float(m.get("liquidity", 0) or 0)
 
 ```
     yes_price, no_price, best_prob, best_side = parse_probability(m)
