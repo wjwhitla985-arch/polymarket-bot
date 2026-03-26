@@ -194,7 +194,7 @@ use_container_width=True, hide_index=True,
 
 if show_rejected and rejected:
 st.divider()
-st.subheader(“🚩 Filtered Out”)
+st.subheader("🚩 Filtered Out")
 st.dataframe(
 pd.DataFrame(rejected)[[“Question”, “Side”, “Volume ($M)”, “Days Left”, “Action”, “Reason”]],
 use_container_width=True, hide_index=True,
