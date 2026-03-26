@@ -38,7 +38,7 @@ st.caption("Confidence = spread tightness + liquidity depth + time horizon + vol
 
 @st.cache_data(ttl=60)
 def fetch_markets() -> list:
-try:
+ try:
 r = requests.get(
 GAMMA_URL,
 params={
