@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from engine import is_safe_category, confidence_score_full, get_verdict, harvest_tier, expected_value
 
-GAMMA_URL = “https://gamma-api.polymarket.com/markets”
+GAMMA_URL = "https://gamma-api.polymarket.com/markets”
 
 st.set_page_config(page_title=“Harvest Scanner”, layout=“wide”)
 st.title(“Polymarket Harvest Scanner”)
